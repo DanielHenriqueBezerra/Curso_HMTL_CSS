@@ -1,190 +1,167 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Define o tipo de documento e o idioma -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sol e Mar Turismo - Inicio</title>
-</head>
+    <title>NovaMedi - Início</title>
 
     <style>
-    /* ----- ESTILO BÁSICO ----- */
+    /* ===== ESTILOS GERAIS ===== */
     body {
-        margin: 0;
-        /* outros: 10px, 20px, auto */
-        font-family: Arial, sans-serif;
-        /* outros: Verdana, Georgia, 'Times New Roman', monospace */
-        background: #f0f8ff;
-        /* outros: white, #e6e6e6, linear-gradient(to right, #fff, #ddd) */
-        color: #000;
-        /* outros: #333, #444, #666, darkblue */
+        margin: 0; /* Remove margens padrão do navegador */
+        font-family: Arial, sans-serif; /* Fonte usada no site */
+        background: #f0f8ff; /* Cor de fundo da página */
+        color: #000; /* Cor do texto */
     }
 
+    /* ===== CABEÇALHO E MENU ===== */
     header {
-        background: #004080;
-        /* outros: darkblue, navy, black, #0066cc */
-        color: white;
-        /* outros: black, yellow, #ffcc00 */
-        padding: 10px;
-        /* outros: 5px, 20px, 40px */
+        background: #004080; /* Cor de fundo azul escuro */
+        color: white; /* Cor do texto */
+        padding: 10px; /* Espaçamento interno */
     }
 
     nav {
-        display: flex;
-        /* outros: block, grid, inline-flex */
-        justify-content: space-between;
-        /* outros: center, flex-start, flex-end, space-around, space-evenly */
-        align-items: center;
-        /* outros: flex-start, flex-end, baseline, stretch */
+        display: flex; /* Coloca os elementos do menu em linha */
+        justify-content: space-between; /* Espaço entre os lados */
+        align-items: center; /* Alinha verticalmente */
     }
 
     nav a {
-        color: white;
-        /* outros: yellow, #ffcc00, lightblue, black */
-        text-decoration: none;
-        /* outros: underline, overline, line-through */
-        margin: 0 8px;
-        /* outros: 0, 5px, 15px */
+        color: white; /* Cor dos links */
+        text-decoration: none; /* Remove sublinhado */
+        margin: 0 8px; /* Espaçamento lateral entre links */
     }
 
     nav a:hover {
-        text-decoration: underline;
-        /* outros: none, overline, line-through */
+        text-decoration: underline; /* Sublinha o link ao passar o mouse */
     }
 
-    section {
+    /* ===== ESTILOS ESPECÍFICOS POR SEÇÃO ===== */
+
+    .sobre {
+        background: #cce6ff; /* Fundo azul claro */
+        text-align: center; /* Centraliza o conteúdo */
+        padding: 40px 20px; /* Espaçamento interno */
+    }
+
+    .equipe {
+        background: #e6f2ff; /* Fundo mais claro ainda */
+        padding: 30px 20px;
         text-align: center;
-        /* outros: left, right, justify */
-        padding: 40px 20px;
-        /* outros: 10px, 20px, 80px */
-        background: #cce6ff;
-        /* outros: #e6f7ff, lightgray, linear-gradient(to bottom, #cce6ff, #99ccff) */
-
     }
 
-    section h1 {
-        font-size: 28px;
-        /* outros: 20px, 36px, 48px */
-        margin-bottom: 10px;
-        /* outros: 0, 20px, 40px */
-
+    .contato {
+        background: #f9f9f9; /* Fundo quase branco */
+        padding: 30px 20px;
+        text-align: left; /* Alinha o texto à esquerda */
     }
 
-    section a {
-        display: inline-block;
-        /* outros: block, inline */
-        background: #004080;
-        /* outros: darkgreen, red, black, #0080ff */
-        color: white;
-        /* outros: black, yellow, lightblue */
-        padding: 10px 15px;
-        /* outros: 5px, 20px, 30px */
-        margin: 5px;
-        /* outros: 0, 10px, 20px */
-        border-radius: 5px;
-        /* outros: 0, 10px, 50% (círculo) */
-        text-decoration: none;
-        /* outros: underline, overline, line-through */
+    .contato address {
+        font-style: normal; /* Remove o itálico padrão do <address> */
+        line-height: 1.6; /* Altura entre linhas */
+        max-width: 600px; /* Largura máxima para não ficar muito largo */
+        margin: 0 auto; /* Centraliza o bloco */
+        font-size: 16px; /* Tamanho de letra legível */
     }
+
+    /* ===== CONTEÚDO DAS SEÇÕES ===== */
 
     article {
-        display: grid;
-        /* outros: block, flex */
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        /* outros: 1fr 1fr 1fr, repeat(2, 1fr), 300px auto */
-        gap: 10px;
-        /* outros: 0, 20px, 40px */
-        padding: 20px;
-        /* outros: 10px, 30px, 50px */
+        display: grid; /* Usamos grid para distribuir os elementos internos */
+        gap: 10px; /* Espaço entre os elementos */
+        padding: 20px; /* Espaçamento interno */
+        text-align: center;
     }
 
     article div {
-        border: 1px solid #ccc;
-        /* outros: none, 2px dashed #000, 3px dotted red */
+        border: 1px solid #ccc; /* Borda cinza clara */
         padding: 15px;
-        /* outros: 5px, 30px, 50px */
-        background: white;
-        /* outros: #f9f9f9, lightyellow, #e6f7ff */
-    }
-
-    section h3 {
-        display: inline-block;
-        background: #004080;
-        color: white;
-        padding: 50px 15px;
-        margin: 5px;
-        border-radius: 20px;
-        text-decoration: none;
-    }
-
-    footer {
-        background: #2064e288;
-        /*background: #004080;*/
-        /* outros: black, darkgray, #333, #0066cc */
-        color: white;
-        /* outros: yellow, lightgray, #ffcc00 */
+        background: white; /* Fundo branco */
         text-align: center;
-        /* outros: left, right, justify */
-        padding: 19px;
-        /* outros: 5px, 20px, 40px */
-        font-size: 15px;
-        /* outros: 10px, 16px, 20px */
-        margin-top: 0px;
-        /* outros: 0, 40px, 80px */
     }
 
-    
-</style>
+    /* ===== LISTA DA EQUIPE COM <dl> ===== */
+    .equipe dl {
+        display: grid; /* Ativa o grid */
+        grid-template-columns: max-content auto; /* Duas colunas: uma pro cargo e uma pro nome */
+        gap: 10px 20px; /* Espaço entre as células */
+        justify-content: center; /* Centraliza horizontalmente */
+        font-size: 16px;
+        text-align: left;
+        max-width: 400px;
+        margin: 0 auto; /* Centraliza o grid na página */
+    }
+
+    /* ===== TÍTULOS DAS SEÇÕES ===== */
+    section h1, section h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    /* ===== RODAPÉ ===== */
+    footer {
+        background: #2064e288; /* Azul com transparência */
+        color: white;
+        text-align: center;
+        padding: 19px;
+        font-size: 15px;
+        margin-top: 0;
+    }
+    </style>
+</head>
 
 <body>
-<header>
-<nav>
-<div><strong> 🩺 NovaMedi Clínica de agendamentos</strong><strong></strong></div>
-<div>
-<a href="index.html">Início</a>
-<a href="destinos.html">Destinos</a>
-<a href="pacotes.html">Pacotes</a>
-<a href="sobre.hmtl">Sobre</a>
-<a href="contato.html">Contato</a>
-</div>
-</nav>
-</header>
+    <!-- CABEÇALHO DO SITE COM NOME E MENU -->
+    <header>
+        <nav>
+            <div>
+                <strong>🩺 NovaMedi Clínica de Agendamentos</strong>
+            </div>
+            <div>
+                <!-- Links de navegação -->
+                <a href="index.html">Início</a>
+                <a href="destinos.html">Destinos</a>
+                <a href="pacotes.html">Pacotes</a>
+                <a href="sobre.html">Sobre</a> <!-- Corrigido (.html e não .hmtl) -->
+                <a href="contato.html">Contato</a>
+            </div>
+        </nav>
+    </header>
 
-<main>
-      <h1>Quem somos</h1>
-        <article>
-            <p>Somos uma agência fundada em <time datetime="2012-01-01">2012</time>.</p>
-            <blockquote>
-                Nossa missão é conectar pessoas a lugares com responsabilidade.
-            </blockquote>
-        </article>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
 
-        <article aria-label="Equipe">
-            <h2>Equipe</h2>
-            <dl>
-                <dt>Direção</dt><dd>Ana Beatriz Santos</dd>
-                <dt>Operações</dt><dd>Marcos Oliveira</dd>
-                <dt>Atendimento</dt><dd>Camila Nunes</dd>
-            </dl>
-       <article aria-label="Equipe">
-            <dl>
-                <dt>Atendimento</dt><dd>Camila Nunes</dd>
-            </dl>
-        </article>
+        <!-- SEÇÃO SOBRE -->
+        <section class="sobre">
+            <h1>Quem somos</h1>
+            <article>
+                <p>Somos uma agência fundada em <time datetime="2012-01-01">2012</time>.</p>
+                <blockquote>
+                    Nossa missão é conectar pessoas a lugares com responsabilidade.
+                </blockquote>
+            </article>
+        </section>
 
-        <article aria-label="Contato institucional">
-            <h2>Contato institucional</h2>
-            <address>
-                Av. tauros, 2034t - Aracaju-SE – Aracaju/SE <br>
-                atendimento@NovaMedi.med.br <br>
-                <small>Atendimento de <time datetime="09:00">09h</time> às 18h</small>
-            </address>
-        </article>
-</main>
+        <!-- SEÇÃO EQUIPE -->
+        <section class="equipe">
+            <article aria-label="Equipe">
+                <h2>Equipe</h2>
+                <dl>
+                    <!-- Lista com descrição e nomes -->
+                    <dt>Direção</dt><dd>Ana Beatriz Santos</dd>
+                    <dt>Operações</dt><dd>Marcos Oliveira</dd>
+                    <dt>Atendimento</dt><dd>Camila Nunes</dd>
+                </dl>
+            </article>
+        </section>
 
-<footer>
-        <p>&copy; 2025 Super Nova - CNPJ 00.000.000/0001</p>
-        <p>Av. tauros, 2034t - Aracaju-SE</p>
-    </footer>
-</main>
-</body>
-</html>
+        <!-- SEÇÃO CONTATO -->
+        <section class="contato">
+            <article aria-label="Contato institucional">
+                <h2>Contato institucional</h2>
+                <address>
+                    Av. tauros, 2034t - Aracaju-SE – Aracaju/SE <br>
+                    atendimento@NovaMedi.med.br <br>
+                    <small>Atendimento de <

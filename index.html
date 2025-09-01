@@ -94,7 +94,13 @@
         /* outros: 0, 10px, 50% (círculo) */
         text-decoration: none;
         /* outros: underline, overline, line-through */
+        transition:all 0.3s ease;
     }
+    #agendamento:hover{
+    transform: translateY(-5px);  
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* cor preta translúcida, por exemplo */
+}
+
     #consulta{display: inline-block;
         /* outros: block, inline */
         background: #004080;
@@ -109,7 +115,12 @@
         /* outros: 0, 10px, 50% (círculo) */
         text-decoration: none;
         /* outros: underline, overline, line-through */
+        transition:all 0.3s ease;
     }
+    #consulta:hover {
+    transform: translateY(-5px);  
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* cor preta translúcida, por exemplo */
+}
 
     article {
         display: grid;
@@ -120,6 +131,7 @@
         /* outros: 0, 20px, 40px */
         padding: 20px;
         /* outros: 10px, 30px, 50px */
+        
     }
 
     article div {
