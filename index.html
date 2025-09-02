@@ -19,7 +19,10 @@
         /* outros: white, #e6e6e6, linear-gradient(to right, #fff, #ddd) */
         color: #000;
         /* outros: #333, #444, #666, darkblue */
+        transition: all 0.3s ease;
     }
+
+
 
     header {
         background: #004080;
@@ -28,16 +31,24 @@
         /* outros: black, yellow, #ffcc00 */
         padding: 10px;
         /* outros: 5px, 20px, 40px */
+        transition: all 0.3s ease;
     }
 
-    img{
+
+    img {
         background: #004080;
         padding: 5px 5px;
         width: 50%;
         margin: 0;
         align-items: center;
-        
-        }
+        transition: all 0.3s ease;
+
+    }
+    img:hover{
+         transform: translateY(-5px);
+        /* Aplica o efeito de hover para todos os três */
+    }
+
     nav {
         display: flex;
         /* outros: block, grid, inline-flex */
@@ -48,17 +59,24 @@
     }
 
     nav a {
+        display: inline-block;
+        background: #50a0e2;
         color: white;
-        /* outros: yellow, #ffcc00, lightblue, black */
+        padding: 10px 25px;
+        margin: 5px;
+        border-radius: 5px;
         text-decoration: none;
-        /* outros: underline, overline, line-through */
-        margin: 0 8px;
-        /* outros: 0, 5px, 15px */
+        transition: all 0.3s ease;
+
+
     }
 
     nav a:hover {
         text-decoration: underline;
         /* outros: none, overline, line-through */
+        transform: translateY(-5px);
+        box-shadow: 0px 0px 20px rgba(221, 8, 8, 0.3);
+        /* cor preta translúcida, por exemplo */
     }
 
     section {
@@ -79,7 +97,7 @@
 
     }
 
-    #agendamento {
+    #agendamento, #consulta {
         display: inline-block;
         /* outros: block, inline */
         background: #004080;
@@ -94,33 +112,14 @@
         /* outros: 0, 10px, 50% (círculo) */
         text-decoration: none;
         /* outros: underline, overline, line-through */
-        transition:all 0.3s ease;
+        transition: all 0.3s ease;
     }
-    #agendamento:hover{
-    transform: translateY(-5px);  
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* cor preta translúcida, por exemplo */
-}
 
-    #consulta{display: inline-block;
-        /* outros: block, inline */
-        background: #004080;
-        /* outros: darkgreen, red, black, #0080ff */
-        color: white;
-        /* outros: black, yellow, lightblue */
-        padding: 10px 45px;
-        /* outros: 5px, 20px, 30px */
-        margin: 5px;
-        /* outros: 0, 10px, 20px */
-        border-radius: 5px;
-        /* outros: 0, 10px, 50% (círculo) */
-        text-decoration: none;
-        /* outros: underline, overline, line-through */
-        transition:all 0.3s ease;
+    #agendamento:hover,#consulta:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+        /* cor preta translúcida, por exemplo */
     }
-    #consulta:hover {
-    transform: translateY(-5px);  
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* cor preta translúcida, por exemplo */
-}
 
     article {
         display: grid;
@@ -131,7 +130,7 @@
         /* outros: 0, 20px, 40px */
         padding: 20px;
         /* outros: 10px, 30px, 50px */
-        
+
     }
 
     article div {
@@ -143,7 +142,9 @@
         /* outros: #f9f9f9, lightyellow, #e6f7ff */
     }
 
-    #Flexibilidade {
+    #Flexibilidade,
+    #Praticidade,
+    #Sustentabilidade {
         display: inline-block;
         background: #004080;
         color: white;
@@ -151,22 +152,19 @@
         margin: 5px;
         border-radius: 20px;
         text-decoration: none;
+        transition: all 0.3s ease;
+        /* Adicionando transição para todos */
+        box-shadow: 20px 20px 5px rgba(0, 21, 255, 0.3);
+        /* Cor de sombra mais próxima para consistência */
     }
-    #Praticidade{display: inline-block;
-        background: #004080;
-        color: white;
-        padding: 50px 15px;
-        margin: 5px;
-        border-radius: 20px;
-        text-decoration: none;}
 
-    #Sustentabilidade{display: inline-block;
-        background: #004080;
-        color: white;
-        padding: 50px 15px;
-        margin: 5px;
-        border-radius: 20px;
-        text-decoration: none;}
+    #Flexibilidade:hover,
+    #Praticidade:hover,
+    #Sustentabilidade:hover {
+        transform: translateY(-5px);
+        /* Aplica o efeito de hover para todos os três */
+    }
+
 
     footer {
         background: #2064e288;
@@ -183,7 +181,6 @@
         margin-top: 0px;
         /* outros: 0, 40px, 80px */
     }
-
     
 </style>
 
@@ -192,21 +189,21 @@
         <nav>
             <div>
                 <strong>🩺 NovaMedi Clínica de agendamentos</strong>
-                
+
             </div>
-            
+
             <div>
-                
-                <a href="index.html">Início</a>
+
+                <a class="index" href="index.html">Início</a>
                 <a href="destinos.html">Destinos</a>
                 <a href="pacotes.html">Pacotes</a>
                 <a href="sobre.html">Sobre</a>
                 <a href="contato.html">Contato</a>
-                
+
             </div>
         </nav>
     </header>
-    
+
     <main>
         <section>
             <img src="imagem/imagem1.jpg" alt="imagem_1">
@@ -222,7 +219,7 @@
         <section>
             <article>
                 <h3 id="Flexibilidade">✈️Flexibilidade</h3>
-                <p>Verifique os horários e agende suas consultas.</p>
+                <p>center Verifique os horários e agende suas consultas.</p>
             </article>
             <article>
                 <h3 id="Praticidade">🩺Praticidade.</h3>

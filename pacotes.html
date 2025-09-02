@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>NovaMedi</title>
 </head>
 <style>
-    
     /* ----- ESTILO BÁSICO ----- */
     body {
         margin: 0;
@@ -131,27 +131,101 @@
         /* outros: 0, 40px, 80px */
     }
 
-    
+    .menu {
+        background-color: #507df8;
+        /* Cor de fundo verde */
+        color: rgb(248, 248, 248);
+        /* Cor do texto (branco) */
+        padding: 10px 25px;
+        /* Espaçamento interno para o balão */
+        border-radius: 25px;
+        /* Bordas arredondadas */
+        text-align: center;
+        /* Alinhamento do texto */
+        font-size: 16px;
+        /* Tamanho da fonte*/
+    }
+
+    /* Estilo da tabela */
+    table.topicos {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    thead.menu {
+        background-color: #4CAF50;
+        /* Cor de fundo do cabeçalho */
+        color: white;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    /* Estilo para os quadrados de "solicitar" */
+    .reserve-cell a {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .reserve-cell button {
+        width: 150px;
+        height: 50px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .reserve-cell button:hover {
+        background-color: #0c10fd;
+        /* Cor ao passar o mouse */
+    }
+
+    /* Adiciona espaçamento entre os botões */
+    .reserve-cell {
+        padding: 0;
+    }
+
+    /* Ajuste de responsividade (se necessário) */
+    @media (max-width: 600px) {
+        table.topicos {
+            font-size: 12px;
+        }
+
+        .reserve-cell button {
+            width: 100px;
+            height: 40px;
+        }
+    }
 </style>
 
 <body>
     <header>
-    <nav>
-        <div><strong>🩺 NovaMedi Clínica de agendamentos</strong></div>
-        <div>
-            <a href="index.html">Início</a>
-            <a href="destinos.html">Destinos</a>
-            <a href="pacotes.html">Pacotes</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="contato.html">Contato</a>
-        </div>
-    </nav>
-   </header>
+        <nav>
+            <div><strong>🩺 NovaMedi Clínica de agendamentos</strong></div>
+            <div>
+                <a href="index.html">Início</a>
+                <a href="destinos.html">Destinos</a>
+                <a href="pacotes.html">Pacotes</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+            </div>
+        </nav>
+    </header>
     <main>
         <h1>Pacotes disponíveis</h1>
 
-        <table>
-            <thead>
+        <table class="topicos">
+
+            <thead class="menu">
                 <tr>
                     <th>Pacote</th>
                     <th>Duração</th>
@@ -161,28 +235,29 @@
                 </tr>
             </thead>
 
+
             <tbody>
                 <tr>
                     <td>Agendamento clinico essencial</td>
                     <td><time datetime="P6D">6 dias</time></td>
-                    <td>Clínica 3⭐, 2 consultas, 1 agendamento</td>
-                    <td>Use seu convenio</td>
+                    <td><strong>Clínica: 3 ⭐⭐⭐<br> Consultas: 2 <br> Agendamento: 1</strong></td>
+                    <td><strong>Convênio <br> Partícular</strong></td>
                     <td><a href="contato.html"><button>solicitar</button></a></td>
                 </tr>
 
                 <tr>
                     <td>Consultas facilitadas</td>
                     <td><time datetime="P6D">6 dias</time></td>
-                    <td>Clínica 3⭐, 2 consultas, 1 agendamento</td>
-                    <td>Use seu convenio</td>
+                    <td><strong>Clínica: 3 ⭐⭐⭐<br> Consultas: 2 <br> Agendamento: 1</strong></td>
+                    <td><strong>Convênio <br> Partícular</strong></td>
                     <td><a href="contato.html"><button>solicitar</button></a></td>
                 </tr>
 
                 <tr>
                     <td>Médicos intuitivos</td>
                     <td><time datetime="P6D">6 dias</time></td>
-                    <td>Clínica 3⭐, 2 consultas, 1 agendamento</td>
-                    <td>Use seu convenio</td>
+                    <td><strong>Clínica: 3 ⭐⭐⭐<br> Consultas: 2 <br> Agendamento: 1</strong></td>
+                    <td><strong>Convênio <br> Partícular</strong></td>
                     <td><a href="contato.html"><button>solicitar</button></a></td>
                 </tr>
             </tbody>
@@ -199,13 +274,13 @@
         </aside>
     </main>
 
-    
+
     <footer>
         <p>&copy; 2025 Super Nova - CNPJ 00.000.000/0001</p>
         <p>Av. tauros, 2034t - Aracaju-SE</p>
     </footer>
-<footer>
-</main>
+    <footer>
+        </main>
 </body>
+
 </html>
-    
