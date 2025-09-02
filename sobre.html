@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <!-- Define o tipo de documento e o idioma -->
     <meta charset="UTF-8">
@@ -7,108 +8,158 @@
     <title>NovaMedi - Início</title>
 
     <style>
-    /* ===== ESTILOS GERAIS ===== */
-    body {
-        margin: 0; /* Remove margens padrão do navegador */
-        font-family: Arial, sans-serif; /* Fonte usada no site */
-        background: #f0f8ff; /* Cor de fundo da página */
-        color: #000; /* Cor do texto */
-    }
+        /* ===== ESTILOS GERAIS ===== */
+        body {
+            margin: 0;
+            /* Remove margens padrão do navegador */
+            font-family: Arial, sans-serif;
+            /* Fonte usada no site */
+            background: #f0f8ff;
+            /* Cor de fundo da página */
+            color: #000;
+            /* Cor do texto */
+        }
 
-    /* ===== CABEÇALHO E MENU ===== */
-    header {
-        background: #004080; /* Cor de fundo azul escuro */
-        color: white; /* Cor do texto */
-        padding: 10px; /* Espaçamento interno */
-    }
+        /* ===== CABEÇALHO E MENU ===== */
+        header {
+            background: #004080;
+            /* Cor de fundo azul escuro */
+            color: white;
+            /* Cor do texto */
+            padding: 10px;
+            /* Espaçamento interno */
+        }
 
-    nav {
-        display: flex; /* Coloca os elementos do menu em linha */
-        justify-content: space-between; /* Espaço entre os lados */
-        align-items: center; /* Alinha verticalmente */
-    }
+        nav {
+            display: flex;
+            /* Coloca os elementos do menu em linha */
+            justify-content: space-between;
+            /* Espaço entre os lados */
+            align-items: center;
+            /* Alinha verticalmente */
+        }
 
-    nav a {
-        color: white; /* Cor dos links */
-        text-decoration: none; /* Remove sublinhado */
-        margin: 0 8px; /* Espaçamento lateral entre links */
-    }
+        nav a {
+            display: inline-block;
+            background: #50a0e2;
+            color: white;
+            padding: 10px 25px;
+            margin: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
 
-    nav a:hover {
-        text-decoration: underline; /* Sublinha o link ao passar o mouse */
-    }
+        nav a:hover {
+            text-decoration: underline;
+            transform: translateY(-5px);
+            box-shadow: 0px 0px 20px rgba(221, 8, 8, 0.3);
+        }
 
-    /* ===== ESTILOS ESPECÍFICOS POR SEÇÃO ===== */
+        /* ===== ESTILOS ESPECÍFICOS POR SEÇÃO ===== */
 
-    .sobre {
-        background: #cce6ff; /* Fundo azul claro */
-        text-align: center; /* Centraliza o conteúdo */
-        padding: 40px 20px; /* Espaçamento interno */
-    }
+        .sobre {
+            background: #cce6ff;
+            /* Fundo azul claro */
+            text-align: center;
+            /* Centraliza o conteúdo */
+            padding: 40px 20px;
+            /* Espaçamento interno */
+        }
 
-    .equipe {
-        background: #e6f2ff; /* Fundo mais claro ainda */
-        padding: 30px 20px;
-        text-align: center;
-    }
+        .equipe {
+            background: #e6f2ff;
+            /* Fundo mais claro ainda */
+            padding: 30px 20px;
+            text-align: center;
+        }
 
-    .contato {
-        background: #f9f9f9; /* Fundo quase branco */
-        padding: 30px 20px;
-        text-align: left; /* Alinha o texto à esquerda */
-    }
+        .contato {
+            background: #f9f9f9;
+            /* Fundo quase branco */
+            padding: 30px 20px;
+            text-align: left;
+            /* Alinha o texto à esquerda */
+        }
 
-    .contato address {
-        font-style: normal; /* Remove o itálico padrão do <address> */
-        line-height: 1.6; /* Altura entre linhas */
-        max-width: 600px; /* Largura máxima para não ficar muito largo */
-        margin: 0 auto; /* Centraliza o bloco */
-        font-size: 16px; /* Tamanho de letra legível */
-    }
+        .contato address {
+            font-style: normal;
+            /* Remove o itálico padrão do <address> */
+            line-height: 1.6;
+            /* Altura entre linhas */
+            max-width: 600px;
+            /* Largura máxima para não ficar muito largo */
+            margin: 0 auto;
+            /* Centraliza o bloco */
+            font-size: 16px;
+            /* Tamanho de letra legível */
+        }
 
-    /* ===== CONTEÚDO DAS SEÇÕES ===== */
+        /* ===== CONTEÚDO DAS SEÇÕES ===== */
 
-    article {
-        display: grid; /* Usamos grid para distribuir os elementos internos */
-        gap: 10px; /* Espaço entre os elementos */
-        padding: 20px; /* Espaçamento interno */
-        text-align: center;
-    }
+        article {
+            display: grid;
+            /* Usamos grid para distribuir os elementos internos */
+            gap: 10px;
+            /* Espaço entre os elementos */
+            padding: 20px;
+            /* Espaçamento interno */
+            text-align: center;
+            background: #50a0e2;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
 
-    article div {
-        border: 1px solid #ccc; /* Borda cinza clara */
-        padding: 15px;
-        background: white; /* Fundo branco */
-        text-align: center;
-    }
+        article:hover {
+            transform: translateY(-5px);
+            box-shadow: 20px 20px 20px rgba(0, 21, 255, 0.3);
+        }
 
-    /* ===== LISTA DA EQUIPE COM <dl> ===== */
-    .equipe dl {
-        display: grid; /* Ativa o grid */
-        grid-template-columns: max-content auto; /* Duas colunas: uma pro cargo e uma pro nome */
-        gap: 10px 20px; /* Espaço entre as células */
-        justify-content: center; /* Centraliza horizontalmente */
-        font-size: 16px;
-        text-align: left;
-        max-width: 400px;
-        margin: 0 auto; /* Centraliza o grid na página */
-    }
+        article div {
+            border: 1px solid #ccc;
+            /* Borda cinza clara */
+            padding: 15px;
+            background: white;
+            /* Fundo branco */
+            text-align: center;
+        }
 
-    /* ===== TÍTULOS DAS SEÇÕES ===== */
-    section h1, section h2 {
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
+        /* ===== LISTA DA EQUIPE COM <dl> ===== */
+        .equipe dl {
+            display: grid;
+            /* Ativa o grid */
+            grid-template-columns: max-content auto;
+            /* Duas colunas: uma pro cargo e uma pro nome */
+            gap: 10px 20px;
+            /* Espaço entre as células */
+            justify-content: center;
+            /* Centraliza horizontalmente */
+            font-size: 16px;
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+            /* Centraliza o grid na página */
 
-    /* ===== RODAPÉ ===== */
-    footer {
-        background: #2064e288; /* Azul com transparência */
-        color: white;
-        text-align: center;
-        padding: 19px;
-        font-size: 15px;
-        margin-top: 0;
-    }
+        }
+
+        /* ===== TÍTULOS DAS SEÇÕES ===== */
+        section h1,
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+
+        }
+
+        /* ===== RODAPÉ ===== */
+        footer {
+            background: #2064e288;
+            /* Azul com transparência */
+            color: white;
+            text-align: center;
+            padding: 19px;
+            font-size: 15px;
+            margin-top: 0;
+        }
     </style>
 </head>
 
@@ -117,7 +168,7 @@
     <header>
         <nav>
             <div>
-                <strong>🩺 NovaMedi Clínica de Agendamentos</strong>
+                <strong>🩺 NovaMedi Agendamentos</strong>
             </div>
             <div>
                 <!-- Links de navegação -->
@@ -135,8 +186,8 @@
 
         <!-- SEÇÃO SOBRE -->
         <section class="sobre">
-            <h1>Quem somos</h1>
             <article>
+                <h1>Quem somos</h1>
                 <p>Somos uma agência fundada em <time datetime="2012-01-01">2012</time>.</p>
                 <blockquote>
                     Nossa missão é conectar pessoas a lugares com responsabilidade.
@@ -150,9 +201,12 @@
                 <h2>Equipe</h2>
                 <dl>
                     <!-- Lista com descrição e nomes -->
-                    <dt>Direção</dt><dd>Ana Beatriz Santos</dd>
-                    <dt>Operações</dt><dd>Marcos Oliveira</dd>
-                    <dt>Atendimento</dt><dd>Camila Nunes</dd>
+                    <dt>Direção:</dt>
+                    <dd>Ana Beatriz Santos</dd>
+                    <dt>Operações:</dt>
+                    <dd>Marcos Oliveira</dd>
+                    <dt>Atendimento:</dt>
+                    <dd>Camila Nunes</dd>
                 </dl>
             </article>
         </section>
@@ -164,4 +218,4 @@
                 <address>
                     Av. tauros, 2034t - Aracaju-SE – Aracaju/SE <br>
                     atendimento@NovaMedi.med.br <br>
-                    <small>Atendimento de <
+                    <small>

@@ -6,56 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovaMedi</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
+
 <style>
     /* ----- ESTILO BÁSICO ----- */
     body {
         margin: 0;
-        /* outros: 10px, 20px, auto */
         font-family: Arial, sans-serif;
-        /* outros: Verdana, Georgia, 'Times New Roman', monospace */
         background: #f0f8ff;
-        /* outros: white, #e6e6e6, linear-gradient(to right, #fff, #ddd) */
         color: #000;
-        /* outros: #333, #444, #666, darkblue */
         transition: all 0.3s ease;
     }
-
-
 
     header {
         background: #004080;
-        /* outros: darkblue, navy, black, #0066cc */
         color: white;
-        /* outros: black, yellow, #ffcc00 */
         padding: 10px;
-        /* outros: 5px, 20px, 40px */
         transition: all 0.3s ease;
     }
-
 
     img {
         background: #004080;
         padding: 5px 5px;
         width: 50%;
-        margin: 0;
-        align-items: center;
+        margin: 0 auto;
+        display: block;
         transition: all 0.3s ease;
-
     }
-    img:hover{
-         transform: translateY(-5px);
-        /* Aplica o efeito de hover para todos os três */
+
+    img:hover {
+        transform: translateY(-5px);
     }
 
     nav {
         display: flex;
-        /* outros: block, grid, inline-flex */
         justify-content: space-between;
-        /* outros: center, flex-start, flex-end, space-around, space-evenly */
         align-items: center;
-        /* outros: flex-start, flex-end, baseline, stretch */
     }
 
     nav a {
@@ -67,79 +53,54 @@
         border-radius: 5px;
         text-decoration: none;
         transition: all 0.3s ease;
-
-
     }
 
     nav a:hover {
         text-decoration: underline;
-        /* outros: none, overline, line-through */
         transform: translateY(-5px);
-        box-shadow: 0px 0px 20px rgba(221, 8, 8, 0.3);
-        /* cor preta translúcida, por exemplo */
+        box-shadow: 0px 0px 20px rgba(41, 79, 248, 0.3);
     }
 
     section {
         text-align: center;
-        /* outros: left, right, justify */
         padding: 40px 20px;
-        /* outros: 10px, 20px, 80px */
         background: #cce6ff;
-        /* outros: #e6f7ff, lightgray, linear-gradient(to bottom, #cce6ff, #99ccff) */
-
     }
 
     section h1 {
         font-size: 28px;
-        /* outros: 20px, 36px, 48px */
         margin-bottom: 10px;
-        /* outros: 0, 20px, 40px */
-
     }
 
-    #agendamento, #consulta {
+    #agendamento,
+    #consulta {
         display: inline-block;
-        /* outros: block, inline */
         background: #004080;
-        /* outros: darkgreen, red, black, #0080ff */
         color: white;
-        /* outros: black, yellow, lightblue */
         padding: 10px 25px;
-        /* outros: 5px, 20px, 30px */
         margin: 5px;
-        /* outros: 0, 10px, 20px */
         border-radius: 5px;
-        /* outros: 0, 10px, 50% (círculo) */
         text-decoration: none;
-        /* outros: underline, overline, line-through */
         transition: all 0.3s ease;
     }
 
-    #agendamento:hover,#consulta:hover {
+    #agendamento:hover,
+    #consulta:hover {
         transform: translateY(-5px);
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-        /* cor preta translúcida, por exemplo */
+        box-shadow: 20px 20px 15px rgba(0, 21, 255, 0.3);
     }
 
     article {
         display: grid;
-        /* outros: block, flex */
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        /* outros: 1fr 1fr 1fr, repeat(2, 1fr), 300px auto */
         gap: 10px;
-        /* outros: 0, 20px, 40px */
         padding: 20px;
-        /* outros: 10px, 30px, 50px */
-
     }
 
     article div {
         border: 1px solid #ccc;
-        /* outros: none, 2px dashed #000, 3px dotted red */
         padding: 15px;
-        /* outros: 5px, 30px, 50px */
         background: white;
-        /* outros: #f9f9f9, lightyellow, #e6f7ff */
     }
 
     #Flexibilidade,
@@ -151,55 +112,91 @@
         padding: 50px 15px;
         margin: 5px;
         border-radius: 20px;
-        text-decoration: none;
         transition: all 0.3s ease;
-        /* Adicionando transição para todos */
         box-shadow: 20px 20px 5px rgba(0, 21, 255, 0.3);
-        /* Cor de sombra mais próxima para consistência */
     }
 
     #Flexibilidade:hover,
     #Praticidade:hover,
     #Sustentabilidade:hover {
         transform: translateY(-5px);
-        /* Aplica o efeito de hover para todos os três */
     }
-
 
     footer {
         background: #2064e288;
-        /*background: #004080;*/
-        /* outros: black, darkgray, #333, #0066cc */
         color: white;
-        /* outros: yellow, lightgray, #ffcc00 */
         text-align: center;
-        /* outros: left, right, justify */
         padding: 19px;
-        /* outros: 5px, 20px, 40px */
         font-size: 15px;
-        /* outros: 10px, 16px, 20px */
         margin-top: 0px;
-        /* outros: 0, 40px, 80px */
     }
-    
+
+    /* -------------------- RESPONSIVIDADE -------------------- */
+
+    /* Imagem responsiva */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Ajustes para tablets e celulares */
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav a {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px 10px;
+        }
+
+        section h1 {
+            font-size: 22px;
+        }
+    }
+
+    /* Ajustes para celulares pequenos */
+    @media (max-width: 480px) {
+        nav div strong {
+            font-size: 14px;
+        }
+
+        section h1 {
+            font-size: 18px;
+        }
+
+        #agendamento,
+        #consulta {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        footer {
+            font-size: 12px;
+        }
+    }
 </style>
 
 <body>
     <header>
         <nav>
             <div>
-                <strong>🩺 NovaMedi Clínica de agendamentos</strong>
-
+                <strong>🩺 NovaMedi Agendamentos</strong>
             </div>
 
             <div>
-
                 <a class="index" href="index.html">Início</a>
                 <a href="destinos.html">Destinos</a>
                 <a href="pacotes.html">Pacotes</a>
                 <a href="sobre.html">Sobre</a>
                 <a href="contato.html">Contato</a>
-
             </div>
         </nav>
     </header>
@@ -211,32 +208,29 @@
             <p>Com o(a) NovaMedi você consegue agendar de maneira mais prática e rápida suas consultas!</p>
             <div>
                 <a id="agendamento" href="destinos.html#agendamento"><strong>Agendamento</strong></a>
-                <a id="consulta" href="destinos.html#Consultas"><strong>consulta</strong></a>
+                <a id="consulta" href="destinos.html#Consultas"><strong>Consulta</strong></a>
             </div>
         </section>
 
-
         <section>
             <article>
-                <h3 id="Flexibilidade">✈️Flexibilidade</h3>
-                <p>center Verifique os horários e agende suas consultas.</p>
+                <h3 id="Flexibilidade">✈️ Flexibilidade</h3>
+                <p>Verifique os horários e agende suas consultas.</p>
             </article>
             <article>
-                <h3 id="Praticidade">🩺Praticidade.</h3>
+                <h3 id="Praticidade">🩺 Praticidade</h3>
                 <p>Procure seus médicos com mais facilidades.</p>
             </article>
             <article>
-                <h3 id="Sustentabilidade">🍀Sustentabilidade</h3>
-                <p>Sem a nescessidade de utilizar papel, apenas com o toque de seu aparelho.</p>
+                <h3 id="Sustentabilidade">🍀 Sustentabilidade</h3>
+                <p>Sem a necessidade de utilizar papel, apenas com o toque de seu aparelho.</p>
             </article>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Super Nova - CNPJ 00.000.000/0001</p>
         <p>Av. tauros, 2034t - Aracaju-SE</p>
     </footer>
-    </section>
-
 </body>
-
 </html>

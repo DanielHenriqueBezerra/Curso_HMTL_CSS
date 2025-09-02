@@ -38,17 +38,20 @@
     }
 
     nav a {
+        display: inline-block;
+        background: #50a0e2;
         color: white;
-        /* outros: yellow, #ffcc00, lightblue, black */
+        padding: 10px 25px;
+        margin: 5px;
+        border-radius: 5px;
         text-decoration: none;
-        /* outros: underline, overline, line-through */
-        margin: 0 8px;
-        /* outros: 0, 5px, 15px */
+        transition: all 0.3s ease;
     }
 
     nav a:hover {
         text-decoration: underline;
-        /* outros: none, overline, line-through */
+        transform: translateY(-5px);
+        box-shadow: 0px 0px 20px rgba(221, 8, 8, 0.3);
     }
 
     section {
@@ -117,10 +120,10 @@
     }
 
     footer {
-        background: #2064e288;
+        background: #ffffff88;
         /*background: #004080;*/
         /* outros: black, darkgray, #333, #0066cc */
-        color: white;
+        color: rgb(19, 18, 18);
         /* outros: yellow, lightgray, #ffcc00 */
         text-align: center;
         /* outros: left, right, justify */
@@ -136,7 +139,7 @@
 <body>
     <header>
         <nav>
-            <div><strong>🩺NovaMedi Clínica de agendamentos</strong></div>
+            <div><strong>🩺 NovaMedi Agendamentos</strong></div>
             <div>
                 <a href="index.html">Início</a>
                 <a href="destinos.html">Destinos</a>
